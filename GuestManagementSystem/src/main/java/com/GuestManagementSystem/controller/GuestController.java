@@ -54,13 +54,16 @@ private GuestServiceImpl guestService;
 	//set guest as a model to prepopulate the data
 	model.addAttribute("guest", guest);
 	return "updateguest";
-		
-		
-		
-		
-		
+	
 	}
 	
+	@GetMapping("/deleteGuest/{id}")
+	public String deleteGuest(@PathVariable (value="id")long id ) {
+		
+		guestService.deleteGuest(id);
+		
+		return "redirect:/";
+	}
 	
 	
 	

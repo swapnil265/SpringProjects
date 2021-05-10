@@ -41,6 +41,13 @@ public class GuestServiceImpl implements GuestService{
 		}
 		return guest;
 	}
+	@Override
+	public void deleteGuest(long id) {
+		// TODO Auto-generated method stub
+		
+	this.guestRepository.deleteById(id);
+		
+	}
 	
 	
 	

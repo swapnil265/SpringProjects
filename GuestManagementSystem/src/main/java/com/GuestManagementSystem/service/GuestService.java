@@ -8,4 +8,5 @@ public interface GuestService {
 	public List<Guest> getAllGuest(); 
 	public void saveGuest(Guest guest);
 	public Guest getGuestById(long id);
+	public void deleteGuest(long id);
 }
