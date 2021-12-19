@@ -1,9 +1,6 @@
 package com.swapnil.full.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Generated;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 import org.hibernate.validator.constraints.Length;
 
@@ -16,7 +13,7 @@ import javax.validation.constraints.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Builder
 @Entity
 public class Department {
     @Id

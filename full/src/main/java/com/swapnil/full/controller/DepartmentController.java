@@ -1,6 +1,7 @@
 package com.swapnil.full.controller;
 
 import com.swapnil.full.entity.Department;
+import com.swapnil.full.error.DepartmentNotFoundException;
 import com.swapnil.full.repository.DepartmentRepository;
 import com.swapnil.full.service.DepartmentService;
 import com.swapnil.full.service.DepartmentServiceImpl;
@@ -35,7 +36,7 @@ public class DepartmentController {
     }
 
     @GetMapping("departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId){
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         return departmentService.fetchDepartmentById(departmentId);
     }
 
